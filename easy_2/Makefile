@@ -1,2 +1,3 @@
+DIR := $(lastword $(subst /, , $(dir $(abspath $(MAKEFILE_LIST)))))
 all:
-	gcc -g -Wall easy_2.c -o easy_2
+	gcc -g -Wall $(DIR).c -o $(DIR)
